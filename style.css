@@ -754,10 +754,27 @@ body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-ca
   height: 45px;
   background-color: black;
   cursor: pointer;
+  right: 20px;
+  position: relative;
 }
-body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .heart-icon:hover {
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos .heart-icon::after {
+  content: "";
+  clip: rect(50px, 50px, 50px, 0px);
   clip-path: path("m0.42858,16.44966l0,-0.50006c0,-6.02653 4.35566,-11.16676 10.29425,-12.15652c3.85388,-0.65438 7.93192,0.62679 10.74257,3.44176l1.0346,1.03287l0.957,-1.03287c2.88825,-2.81497 6.8887,-4.09615 10.82017,-3.44176c5.94032,0.98977 10.29425,6.12999 10.29425,12.15652l0,0.50006c0,3.57798 -1.48292,7.00078 -4.1039,9.44071l-15.57932,14.54472c-0.64662,0.60352 -1.50017,0.93976 -2.3882,0.93976c-0.88803,0 -1.74157,-0.33624 -2.3882,-0.93976l-15.58018,-14.54472c-2.61753,-2.43993 -4.10302,-5.86272 -4.10302,-9.44071l-0.00003,0z");
-  animation: ok 0.4s linear forwards;
+  transition: clip 1s;
+  background: linear-gradient(to top, #FF79DA 15%, #9356DC 95%, white 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos:hover > .heart-icon {
+  background: none;
+  clip-path: none;
+}
+body > div > main .restaurants .restaurants_list .restaurant-card .restaurant-card__infos:hover > .heart-icon::after {
+  clip: rect(0px, 50px, 50px, 0px);
 }
 body > div > main .restaurants .restaurants_list .restaurant-card > p {
   position: absolute;
