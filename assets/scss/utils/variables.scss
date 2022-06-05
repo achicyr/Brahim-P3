@@ -40,3 +40,8 @@ $footer-bg-color: #353535;
     95% {background: linear-gradient(to top, $secondary-color 15%, $primary-color 85%, white 100%);}
     100%{background: linear-gradient(to top, $secondary-color 15%, $primary-color 95%, white 100%);}
 }
+@keyframes okok{
+    0%{width:0;height:0;}
+    60%{width:10px;height:10px;}
+    100%{width:45px;height:45px;}
+}
