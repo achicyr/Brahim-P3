@@ -612,26 +612,53 @@ a:visited {
 }
 
 /**/
-header {
+.header--bsBlue, .header {
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header--bsBlue__bouton > i, .header__bouton > i {
+  position: absolute;
+  cursor: pointer;
+}
+.header--bsBlue__bouton > i:hover, .header__bouton > i:hover {
+  color: red;
+  background: purple;
+}
+
+.header {
   padding: 0 30px;
   width: 100%;
   box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.2);
 }
-header > img {
+.header__logo {
   width: 200px;
   padding: 30px 0px 20px 0px;
 }
-header > a > i {
-  position: absolute;
+.header__bouton > i {
   left: 30px;
-  cursor: pointer;
   transition: transform ease-in-out 50ms;
 }
-header > a > i:hover {
+.header__bouton > i:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+.header--bsBlue {
+  padding: 0 30px;
+  width: 100%;
+  box-shadow: 0 0 1em 1px blue;
+}
+.header--bsBlue__logo {
+  width: 200px;
+  padding: 30px 0px 20px 0px;
+}
+.header--bsBlue__bouton > i {
+  left: 30px;
+  transition: transform ease-in-out 50ms;
+}
+.header--bsBlue__bouton > i:hover {
   opacity: 0.6;
   transform: scale(1.2);
 }
@@ -867,7 +894,7 @@ body > div > main .restaurants {
   align-items: flex-start;
   padding: 60px 30px;
 }
-body > div > main .restaurants .restaurants_list {
+body > div > main .restaurants .restaurants__list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -875,7 +902,7 @@ body > div > main .restaurants .restaurants_list {
   padding: 10px 0;
 }
 @media screen and (min-width: 900px) {
-  body > div > main .restaurants .restaurants_list {
+  body > div > main .restaurants .restaurants__list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
