@@ -1,37 +1,16 @@
-/**/
-// header {
-//     z-index: 2;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     padding: 0 30px;
-//     width: 100%;
-//     box-shadow: 0 1px 10px 0px rgba(black, .2);
-//     .header__logo {
-//       width: 200px;
-//       padding: 30px 0px 20px 0px;
-//     }
-//     > a {
-//       .header__return-button {
-//         position: absolute;
-//         left: 30px;
-//         cursor: pointer;
-//         transition: transform ease-in-out 50ms;
-//         &:hover {
-//           opacity: .6;
-//           transform: scale(1.2);
-//       }
-//     }
-//   }
-// }
-
+/*
+ J'APPEL DANS L'EXTENSION DE MON BLOC BEM (ici .header)
+ LA MIXIN DU BLOC (ici @header) OÙ JE REPRODUIT L'ARCHITECTURE DE MON BLOC HTML (ici logo(>img) et bouton(>button))
+ À LA RACINE DE LA MIXIN ET DE SES ÉLÉMENT, LA PREMIERE REGLE EST TOUJOURS @extend %placeholder
+ JE CRÉER LES VARIABLE($header(un map)) ET PLACEHOLDER(%header(>img et >button)
+*/
 %header{
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   &__logo{}
-  &__return-button{
+  &__bouton{
     > i {
       position: absolute;
       cursor: pointer;
@@ -64,8 +43,8 @@ $header: (
     padding: $l_p;
   }
 
-  &__return-button {
-    @extend %header__return-button;
+  &__bouton {
+    @extend %header__bouton;
     > i {
       left: $b_l;
       transition: transform ease-in-out $b_t;
